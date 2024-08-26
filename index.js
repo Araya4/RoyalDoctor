@@ -4,5 +4,11 @@ const dictIframe = {'1':"k67GBsH6KHMt0sBlZam",'2':'k4vik4QaAhibmHBlZio','3':'k38
 }
 
 function changeSrc(id){
-    document.getElementById('myVideo').src = "https://www.dailymotion.com/embed/video/"+dictIframe[id];
+    const myVideo = document.getElementById('myVideo');
+    if(id==="0"){
+        myVideo.src='https://i.ibb.co/FJ9qQyJ/youtube-V3.png';
+    }else{
+        myVideo.src = "https://www.dailymotion.com/embed/video/"+dictIframe[id];
+    }
+    
 }
