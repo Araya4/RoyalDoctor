@@ -7,10 +7,13 @@ hr{
     height: 540px;
 }
 .video-container iframe{
-    width: 100%;
+    width: 100vw;
     height: 100%;
 }
-.btn-group > button{
-    margin: 0 1px;
-    background-color: darkblue;
+
+.btn-group{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    column-gap: 2px;
+    row-gap: 2px;
 }
