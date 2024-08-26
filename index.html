@@ -9,32 +9,38 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" value="1" onclick="changeSrc(this.value)">1</button>
-        <button type="button" class="btn btn-primary" value="2" onclick="changeSrc(this.value)" >2</button>
-        <button type="button" class="btn btn-primary" value="3" onclick="changeSrc(this.value)">3</button>
-        <button type="button" class="btn btn-primary" value="4" onclick="changeSrc(this.value)">4</button>
-        <button type="button" class="btn btn-primary" value="5" onclick="changeSrc(this.value)">5</button>
-        <button type="button" class="btn btn-primary" value="6" onclick="changeSrc(this.value)">6</button>
-        <button type="button" class="btn btn-primary" value="7" onclick="changeSrc(this.value)">7</button>
-        <button type="button" class="btn btn-primary" value="8" onclick="changeSrc(this.value)">8</button>
-        <button type="button" class="btn btn-primary" value="9" onclick="changeSrc(this.value)">9</button>
-        <button type="button" class="btn btn-primary" value="10" onclick="changeSrc(this.value)">10</button>
-        <button type="button" class="btn btn-primary" value="11" onclick="changeSrc(this.value)">11</button>
-        <button type="button" class="btn btn-primary" value="12" onclick="changeSrc(this.value)">12</button>
-        <button type="button" class="btn btn-primary" value="13" onclick="changeSrc(this.value)">13</button>
-        <button type="button" class="btn btn-primary" value="14" onclick="changeSrc(this.value)">14</button>
-        <button type="button" class="btn btn-primary" value="15" onclick="changeSrc(this.value)">15</button>
-        <button type="button" class="btn btn-primary" value="16" onclick="changeSrc(this.value)">16</button>
-        <button type="button" class="btn btn-primary" value="17" onclick="changeSrc(this.value)">17</button>
-        <button type="button" class="btn btn-primary" value="18" onclick="changeSrc(this.value)">18</button>
-        <button type="button" class="btn btn-primary" value="19" onclick="changeSrc(this.value)">19</button>
-        <button type="button" class="btn btn-primary" value="20" onclick="changeSrc(this.value)">20</button>
-        <button type="button" class="btn btn-primary" value="21" onclick="changeSrc(this.value)">21</button>
-        <button type="button" class="btn btn-primary" value="22" onclick="changeSrc(this.value)">22</button>
-        
+    <div class="GroupSel">
+        <select class="form-select" aria-label="Ep1-10" onchange="changeSrc(this.value)">
+            <option value="0" selected>ตอนที่ 1-10</option>
+            <option value="1">ตอนที่ 1</option>
+            <option value="2">ตอนที่ 2</option>
+            <option value="3">ตอนที่ 3</option>
+            <option value="4">ตอนที่ 4</option>
+            <option value="5">ตอนที่ 5</option>
+            <option value="6">ตอนที่ 6</option>
+            <option value="7">ตอนที่ 7</option>
+            <option value="8">ตอนที่ 8</option>
+            <option value="9">ตอนที่ 9</option>
+            <option value="10">ตอนที่ 10</option>
+        </select>
+        <select class="form-select" aria-label="Ep11-12" onchange="changeSrc(this.value)">
+            <option value="0" selected>ตอนที่ 11-22</option>
+            <option value="11">ตอนที่ 11</option>
+            <option value="12">ตอนที่ 12</option>
+            <option value="13">ตอนที่ 13</option>
+            <option value="14">ตอนที่ 14</option>
+            <option value="15">ตอนที่ 15</option>
+            <option value="16">ตอนที่ 16</option>
+            <option value="17">ตอนที่ 17</option>
+            <option value="18">ตอนที่ 18</option>
+            <option value="19">ตอนที่ 19</option>
+            <option value="20">ตอนที่ 20</option>
+            <option value="21">ตอนที่ 21</option>
+            <option value="22">ตอนที่ 22 (ตอนจบ) </option>
+        </select>
     </div>
-    <hr>
+      
+
     <div class="video-container">
         <iframe id="myVideo" frameborder="0" width="480" height="270" src="https://i.ibb.co/FJ9qQyJ/youtube-V3.png" allowfullscreen></iframe>
 
