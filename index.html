@@ -52,27 +52,31 @@
     <!-- Sidebar -->
     <nav id="sidebar" class="sidebar bg-light text-white collapse">
         <ul class="nav flex-column sidebar-content">
-            <li><button class="nav-link" value="k67GBsH6KHMt0sBlZam" onclick="changeSrc(this.value , 1)">ตอนที่ 1</button></li>
-            <li><button class="nav-link" value="k4vik4QaAhibmHBlZio" onclick="changeSrc(this.value , 1)">ตอนที่ 2</button></li>
-            <li><button class="nav-link" value="k38EjQ3yvi40m6BlZim" onclick="changeSrc(this.value , 1)">ตอนที่ 3</button></li>
-            <li><button class="nav-link" value="k2nISFY0nl4OY6BlZik" onclick="changeSrc(this.value , 1)">ตอนที่ 4</button></li>
-            <li><button class="nav-link" value="kZyrYnOwlYFoiNBlZig" onclick="changeSrc(this.value , 1)">ตอนที่ 5</button></li>
-            <li><button class="nav-link" value="k6SMmcKlfLs5H6BlZii" onclick="changeSrc(this.value , 1)">ตอนที่ 6</button></li>
-            <li><button class="nav-link" value="k1zMQmiZCHqCMBBlZEi" onclick="changeSrc(this.value , 1)">ตอนที่ 7</button></li>
-            <li><button class="nav-link" value="k7q3j3t4Vvbs0WBlZEg" onclick="changeSrc(this.value , 1)">ตอนที่ 8</button></li>
-            <li><button class="nav-link" value="ko9txT3mPXqW44BlZEa" onclick="changeSrc(this.value , 1)">ตอนที่ 9</button></li>
-            <li><button class="nav-link" value="k5roxIbt2Tn5YRBlZEc" onclick="changeSrc(this.value , 1)">ตอนที่ 10</button></li>
-                
-            <li><button class="nav-link" value="https://shorturl.at/inkN1" onclick="changeSrc(this.value , 2)">ตอนที่ 11 เป็นต้นไป</button></li>
-            <li><button class="nav-link" value="1003029247" onclick="changeSrc(this.value , 3)">ตอนที่ 21</button></li>   
-            <li><button class="nav-link" value="1003032131" onclick="changeSrc(this.value , 3)">ตอนที่ 22 จบ</button></li>
+            <li><button class="nav-link" >Home</button></li>
+            <li><button class="nav-link" >ตอนที่ 1</button></li>
+            <li><button class="nav-link" >ตอนที่ 2</button></li>
+            <li><button class="nav-link" >ตอนที่ 3</button></li>
+            <li><button class="nav-link" >ตอนที่ 4</button></li>
+            <li><button class="nav-link" >ตอนที่ 5</button></li>
+            <li><button class="nav-link" >ตอนที่ 6</button></li>
+            <li><button class="nav-link" >ตอนที่ 7</button></li>
+            <li><button class="nav-link" >ตอนที่ 8</button></li>
+            <li><button class="nav-link" >ตอนที่ 9</button></li>
+            <li><button class="nav-link" >ตอนที่ 10</button></li>
+            <li><button class="nav-link" >ตอนที่ 11</button></li>
+            <li><button class="nav-link" >ตอนที่ 12</button></li>
+            <li><button class="nav-link" >ตอนที่ 13</button></li>
+            <li><button class="nav-link" >ตอนที่ 14</button></li>
+            <li><button class="nav-link" >ตอนที่ 15</button></li>
+            <li><button class="nav-link" >ตอนที่ 16</button></li>
+            <li><button class="nav-link" >ตอนที่ 17</button></li>
+            <li><button class="nav-link" >ตอนที่ 18</button></li>
+            <li><button class="nav-link" >ตอนที่ 19</button></li>
+            <li><button class="nav-link" >ตอนที่ 20</button></li>
+            <li><button class="nav-link" >ตอนที่ 21</button></li>   
+            <li><button class="nav-link" >ตอนที่ 22 จบ</button></li>
         </ul>
-        <!-- <div class="sidebar-content">
-            <h5>Sidebar</h5>
-            <a href="#" class="text-white d-block" onclick="showContent()">Item 1</a>
-            <a href="#" class="text-white d-block" onclick="showContent()">Item 2</a>
-            <a href="#" class="text-white d-block" onclick="showContent()">Item 3</a>
-        </div> -->
+
     </nav>
 
     <!-- Content Area -->
@@ -88,20 +92,26 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-        function changeSrc(fileId, source){
-            document.getElementById("sidebar").display="none";
-            const myVideo = document.getElementById('myVideo');
-            if(fileId==="0"){
-                myVideo.src='https://i.ibb.co/FJ9qQyJ/youtube-V3.png';
-            }else if(source===1){
-                myVideo.src = `https://www.dailymotion.com/embed/video/${fileId}?autoplay=1`;
-            }else if(source===2){
-                myVideo.src=`${fileId}`;
-            }else if(source===3){ 
-                myVideo.src=`https://player.vimeo.com/video/${fileId}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`;
-            }
-            
-        }
+        const myVideo = document.getElementById('myVideo');
+        const data = ["about:blank","k67GBsH6KHMt0sBlZam" , 'k4vik4QaAhibmHBlZio' , 'k38EjQ3yvi40m6BlZim' , 'k2nISFY0nl4OY6BlZik','kZyrYnOwlYFoiNBlZig',
+            'k6SMmcKlfLs5H6BlZii','k1zMQmiZCHqCMBBlZEi','k7q3j3t4Vvbs0WBlZEg','ko9txT3mPXqW44BlZEa','k5roxIbt2Tn5YRBlZEc',
+            'k5jZQHHPOavmazBn4yG','kFznqQYbMplvFYBn4yy','kUkWgOFiaBqrm6Bn4tq','k5QsQYegtqJmBtBn4yC','k5B21GO2rEIMyGBn4yA',
+            'k43avMNSRrAf7RBn4ys','k1psNf0L5VCUjSBn4yw','k5x7TlqgPAft7OBn4yu','k7JRMfE37Zw6HQBn4yq','k70FbxeovO1XJUBn4yE',
+            '1003029247','1003032131'];
+        const lis = document.querySelectorAll("li");
+        lis.forEach((element,idx)=>{
+            element.addEventListener("click",function(e){
+                e.preventDefault();
+                if(idx===0){
+                    myVideo.src = "about:blank";
+                }
+                if(idx>20) { 
+                    myVideo.src=`https://player.vimeo.com/video/${data[idx]}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`; 
+                }else{
+                    myVideo.src =  `https://www.dailymotion.com/embed/video/${data[idx]}?autoplay=1`;
+                }
+            })
+        })
         function showContent() {
             var sidebar = document.getElementById('sidebar');
             var contentArea = document.getElementById('content-area');
