@@ -21,6 +21,12 @@
             color:wheat;
             border: none;
         }
+
+        .flex-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        
         .video-container {
             position: relative; /* Required for absolute positioning of the iframe */
             width: 90%; /* Set the desired width */
@@ -49,15 +55,22 @@
     </style>
 </head>
 <body>
-    
+    <div class="flex-container">
+        <a id="prev" href="details.html?card=1" class="btn myBtn"><i class='fas fa-angle-left' style='font-size:30px;'></i></a>
+        <a href="index.html" class="btn myBtn"><i class='fas fa-house' style='font-size:30px;'></i></a>
+        <a id="next" href="details.html?card=3" class="btn myBtn"><i class='fas fa-angle-right' style='font-size:30px;'></i></a>
+    </div>
+
     <div class="container my-0">
-        <a href="index.html" class="btn myBtn"><i class='fas fa-angle-left' style='font-size:30px;'></i></a>
         <div class="video-container">
             <iframe id="myVideo" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
+        const leftIcon = document.getElementById("prev");
+        const rightIcon = document.getElementById("next");
+
         const arrSrc = ["about:blank",
             "k67GBsH6KHMt0sBlZam" , 'k4vik4QaAhibmHBlZio' , 'k38EjQ3yvi40m6BlZim' , 'k2nISFY0nl4OY6BlZik','kZyrYnOwlYFoiNBlZig',
                 'k6SMmcKlfLs5H6BlZii','k1zMQmiZCHqCMBBlZEi','k7q3j3t4Vvbs0WBlZEg','ko9txT3mPXqW44BlZEa','k5roxIbt2Tn5YRBlZEc',
@@ -69,11 +82,14 @@
             // Extract query parameter from the URL
             const params = new URLSearchParams(window.location.search);
             const cardId = params.get('card');
+            var cardNum = Number(cardId);
             
             // Load content based on cardId
             const contentElement = document.getElementById('myVideo');
             contentElement.src = cardId<=20?`https://www.dailymotion.com/embed/video/${arrSrc[cardId]}?autoplay=1`:`https://player.vimeo.com/video/${arrSrc[cardId]}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479` ;
 
+            rightIcon.href = cardNum===22?"index.html":`details.html?card=${cardNum+1}`;
+            leftIcon.href = cardNum===1?"index.html":`details.html?card=${cardNum-1}`
         });
     </script>
 </body>
