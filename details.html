@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Royal Doctor Series</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/yycK59k/blue-glossy-home-icon-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        .myBtn{
+            background-color: cadetblue;
+            color:wheat;
+            border: none;
+        }
+        .myBtn:hover{
+            color:wheat;
+            border: none;
+        }
+        .video-container {
+            position: relative; /* Required for absolute positioning of the iframe */
+            width: 90%; /* Set the desired width */
+            padding-top: 62.5%; /* 4:3 Aspect Ratio (3 / 4 = 0.75 or 75%) */
+            margin: 15% auto; /* Center the container horizontally */
+            overflow: hidden; /* Hide anything outside the container */
+          }
+        
+          /* Style for the iframe */
+          .video-container iframe {
+            position: absolute; /* Position the iframe absolutely within the container */
+            top: 0%;
+            left: 0%;
+            width: 100%; /* Make iframe fill the container */
+            height: 100%; /* Make iframe fill the container */
+            overflow: hidden;
+            display: block;
+          }
+        
+          @media (max-width: 768px) {
+            .video-container {
+                padding-top: 62.5%; /* 4:3 Aspect Ratio */
+      
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container my-0">
+        <a href="index.html" class="btn myBtn"><i class='fas fa-angle-left' style='font-size:30px;'></i></a>
+        <div class="video-container">
+            <iframe id="myVideo" src="about:blank" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const arrSrc = ["about:blank",
+            "k67GBsH6KHMt0sBlZam" , 'k4vik4QaAhibmHBlZio' , 'k38EjQ3yvi40m6BlZim' , 'k2nISFY0nl4OY6BlZik','kZyrYnOwlYFoiNBlZig',
+                'k6SMmcKlfLs5H6BlZii','k1zMQmiZCHqCMBBlZEi','k7q3j3t4Vvbs0WBlZEg','ko9txT3mPXqW44BlZEa','k5roxIbt2Tn5YRBlZEc',
+                'k5jZQHHPOavmazBn4yG','kFznqQYbMplvFYBn4yy','kUkWgOFiaBqrm6Bn4tq','k5QsQYegtqJmBtBn4yC','k5B21GO2rEIMyGBn4yA',
+                'k43avMNSRrAf7RBn4ys','k1psNf0L5VCUjSBn4yw','k5x7TlqgPAft7OBn4yu','k7JRMfE37Zw6HQBn4yq','k70FbxeovO1XJUBn4yE',
+                '1003029247','1003032131'];
+                
+        document.addEventListener('DOMContentLoaded', function() {
+            // Extract query parameter from the URL
+            const params = new URLSearchParams(window.location.search);
+            const cardId = params.get('card');
+            
+            // Load content based on cardId
+            const contentElement = document.getElementById('myVideo');
+            contentElement.src = cardId<=20?`https://www.dailymotion.com/embed/video/${arrSrc[cardId]}?autoplay=1`:`https://player.vimeo.com/video/${arrSrc[cardId]}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479` ;
+
+        });
+    </script>
+</body>
+</html>
