@@ -1,0 +1,98 @@
+body{
+    background-color: #e1f5fe;
+    color: wheat;
+}
+/* General card styling */
+.card {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color:transparent;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+i{
+    font-size:30px;
+    color: #01579b;
+}
+.myBtn{
+    background-color: transparent;
+    color:wheat;
+    border: none;
+}
+.myBtn:hover{
+    color:wheat;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    background-color: transparent;
+
+}
+.card-body { margin: 0; padding: 1%; }
+.card-body img{
+    float: left;
+    margin-right: 2%;
+    width: 10%;
+}
+.card-body p{
+    font-size: 1rem;
+    font-weight: bolder;
+    color:#01579b;
+}
+h5{
+    color:#01579b;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* Media query for smartphones */
+@media (max-width: 600px) {
+    .card {
+    width: 100%; /* Full width on small screens */
+    }
+    .video-container {
+        padding-top: 62.5%; /* 4:3 Aspect Ratio */
+
+    }
+
+}
+.video-container {
+    position: relative; /* Required for absolute positioning of the iframe */
+    width: 90%; /* Set the desired width */
+    padding-top: 62.5%; /* 4:3 Aspect Ratio (3 / 4 = 0.75 or 75%) */
+    margin: 15% auto; /* Center the container horizontally */
+    overflow: hidden; /* Hide anything outside the container */
+  }
+
+  /* Style for the iframe */
+  .video-container iframe {
+    position: absolute; /* Position the iframe absolutely within the container */
+    top: 0%;
+    left: 0%;
+    width: 100%; /* Make iframe fill the container */
+    height: 100%; /* Make iframe fill the container */
+    overflow: hidden;
+    display: block;
+  }
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Optional: Media query for tablets or larger devices */
+@media (min-width: 601px) {
+    .card {
+    width: 90%; /* Example width for larger devices */
+    }
+    .video-container {
+        padding-top: 62.5%; /* 4:3 Aspect Ratio */
+
+    }
+
+}
