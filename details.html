@@ -30,8 +30,7 @@
             "k67GBsH6KHMt0sBlZam" , 'k4vik4QaAhibmHBlZio' , 'k38EjQ3yvi40m6BlZim' , 'k2nISFY0nl4OY6BlZik','kZyrYnOwlYFoiNBlZig',
                 'k6SMmcKlfLs5H6BlZii','k1zMQmiZCHqCMBBlZEi','k7q3j3t4Vvbs0WBlZEg','ko9txT3mPXqW44BlZEa','k5roxIbt2Tn5YRBlZEc',
                 'k5jZQHHPOavmazBn4yG','kFznqQYbMplvFYBn4yy','kUkWgOFiaBqrm6Bn4tq','k5QsQYegtqJmBtBn4yC','k5B21GO2rEIMyGBn4yA',
-                'k43avMNSRrAf7RBn4ys','k1psNf0L5VCUjSBn4yw','k5x7TlqgPAft7OBn4yu','k7JRMfE37Zw6HQBn4yq','k70FbxeovO1XJUBn4yE',
-                '1003029247','1003032131'];
+                'k43avMNSRrAf7RBn4ys','k1psNf0L5VCUjSBn4yw','k5x7TlqgPAft7OBn4yu','k7JRMfE37Zw6HQBn4yq','k70FbxeovO1XJUBn4yE'];
                 
         document.addEventListener('DOMContentLoaded', function() {
             // Extract query parameter from the URL
@@ -41,9 +40,9 @@
             
             // Load content based on cardId
             const contentElement = document.getElementById('myVideo');
-            contentElement.src = cardId<=20?`https://www.dailymotion.com/embed/video/${arrSrc[cardId]}?autoplay=1`:`https://player.vimeo.com/video/${arrSrc[cardId]}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479` ;
-
-            rightIcon.href = cardNum===22?"index.html":`details.html?card=${cardNum+1}`;
+            contentElement.src = `https://www.dailymotion.com/embed/video/${arrSrc[cardId]}`
+                
+            rightIcon.href = cardNum===20?"index.html":`details.html?card=${cardNum+1}`;
             leftIcon.href = cardNum===1?"index.html":`details.html?card=${cardNum-1}`
         });
     </script>
